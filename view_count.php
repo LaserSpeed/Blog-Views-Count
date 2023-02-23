@@ -41,15 +41,16 @@ function count_blog_view() {
     }
 }
 
+add_action('wp_head', 'count_blog_view'); // hook to call the function
+
+// add custome style for the plugin
 function custom_style() {
     $path = plugins_url('css/main.css', __FILE__);
     $ver_style = filemtime(plugin_dir_path(__FILE__, 'css/main.css'));
     wp_enqueue_style('my_custom_style', $path, '', $ver_style);
 }
-
+// action hook for custom styleSheet
 add_action('wp_enqueue_scripts', 'custom_style');
-
-add_action('wp_head', 'count_blog_view'); // hook to call the function
 
 // adding a shortcode to view the total views of the blog
 function blog_view_total() {
