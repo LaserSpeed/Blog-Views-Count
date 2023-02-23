@@ -1,0 +1,9 @@
+div.view_page_style span.view_blog{
+    color: rgb(113, 113, 114);
+}
+
+div.view_page_style span.view_number {
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
